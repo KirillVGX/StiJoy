@@ -3,9 +3,22 @@ import Link from 'next/link';
 import { mitr } from '../header/font';
 import { menu } from '@/data/menu';
 
-function StoreButton({ img, title }: { img: string; title: string }) {
+function StoreButton({
+    img,
+    title,
+    link,
+}: {
+    img: string;
+    title: string;
+    link: string;
+}) {
     return (
-        <button className="flex items-center gap-3 rounded-xl border border-white/15 bg-white/5 px-4 py-2 backdrop-blur-md transition hover:border-[#d4af37]/40">
+        <Link
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 rounded-xl border border-white/15 bg-white/5 px-4 py-2 backdrop-blur-md transition hover:border-[#d4af37]/40"
+        >
             <Image
                 src={img}
                 alt=""
@@ -16,7 +29,7 @@ function StoreButton({ img, title }: { img: string; title: string }) {
                 <span className="text-xs text-gray-400">Доступно в</span>
                 <p className="text-sm font-medium text-white">{title}</p>
             </div>
-        </button>
+        </Link>
     );
 }
 
@@ -28,21 +41,23 @@ const linkClass =
 export default function Footer() {
     return (
         <footer className="mt-8 w-full rounded-t-3xl bg-linear-to-br from-[#05040d] via-[#0c0b1d] to-[#1a1638] px-10 py-14 text-sm">
-            <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
                 <span
                     className={`${mitr.className} text-3xl font-semibold tracking-wide text-white`}
                 >
                     <span className="text-[#d4af37]">Sti</span>Joy.com
                 </span>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                     <StoreButton
                         img="/play-market.png"
                         title="Google Play"
+                        link="https://play.google.com/store/apps/details?id=com.stijoy_studio.stijoy_app&hl"
                     />
                     <StoreButton
                         img="/app-store.svg"
                         title="App Store"
+                        link="https://testflight.apple.com/join/AMXN6FRX"
                     />
                 </div>
             </div>

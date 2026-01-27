@@ -1,90 +1,15 @@
+import { lazy, Suspense } from 'react';
+import Reveal from '@/components/reveal/Reveal';
+import Loader from '@/components/loader/Loader';
+
+const Standards = lazy(() => import('@/sections/standards/Standards'));
+
 export default function Page() {
     return (
-        <section className="w-full rounded-2xl bg-[#f3f4f8] py-20">
-            <div className="mx-auto max-w-4xl px-6">
-                <h4 className="mb-6 text-3xl font-bold text-[#c6a54a]">
-                    Стандарти безпеки дітей
-                </h4>
-
-                <div className="space-y-6 leading-relaxed text-gray-700">
-                    <p>
-                        Ми серйозно ставимося до захисту дітей та їхніх прав.
-                        Наш додаток розроблений з урахуванням найкращих практик
-                        у сфері безпеки дітей в інтернеті.
-                    </p>
-
-                    <div>
-                        <h5 className="mb-2 text-lg font-semibold text-gray-900">
-                            Запобігання сексуальному насильству над дітьми
-                        </h5>
-                        <p>
-                            У нашому додатку суворо забороняється будь-який
-                            контент, що містить сексуальне насильство,
-                            експлуатацію або інші форми порушення прав дитини.
-                            Ми активно працюємо над виявленням і видаленням
-                            подібних матеріалів.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h5 className="mb-2 text-lg font-semibold text-gray-900">
-                            Контроль і модерація контенту
-                        </h5>
-                        <p>
-                            У додатку діє система модерації, яка запобігає
-                            поширенню шкідливого або небезпечного контенту.
-                            Також використовуються автоматизовані інструменти
-                            для виявлення заборонених матеріалів.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h5 className="mb-2 text-lg font-semibold text-gray-900">
-                            Захист персональних даних дітей
-                        </h5>
-                        <p>
-                            Ми забезпечуємо конфіденційність і захист
-                            персональних даних дітей відповідно до чинного
-                            законодавства. Дані не передаються третім особам і
-                            використовуються виключно з метою забезпечення
-                            безпеки користувачів.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h5 className="mb-2 text-lg font-semibold text-gray-900">
-                            Звіти про порушення
-                        </h5>
-                        <p>
-                            Якщо ви виявили підозрілий або заборонений контент,
-                            будь ласка, повідомте нас. Ми оперативно розглядаємо
-                            всі звернення та вживаємо відповідних заходів.
-                        </p>
-                    </div>
-
-                    <div className="rounded-xl bg-white p-6">
-                        <h5 className="mb-2 text-lg font-semibold text-gray-900">
-                            Контакт для питань безпеки
-                        </h5>
-                        <p>
-                            З усіх питань, пов’язаних із безпекою або захистом
-                            дітей, ви можете звернутися за адресою:{' '}
-                            <a
-                                href="mailto:stijoy.studio@gmail.com"
-                                className="font-medium text-[#c6a54a] hover:underline"
-                            >
-                                stijoy.studio@gmail.com
-                            </a>
-                        </p>
-                    </div>
-
-                    <p className="pt-4 font-medium text-gray-900">
-                        Ми прагнемо створити безпечний і відповідальний простір
-                        для всіх користувачів нашого додатку, особливо для
-                        дітей.
-                    </p>
-                </div>
-            </div>
-        </section>
+        <Suspense fallback={<Loader />}>
+            <Reveal>
+                <Standards />
+            </Reveal>
+        </Suspense>
     );
 }

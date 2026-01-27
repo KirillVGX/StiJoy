@@ -11,7 +11,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const isMobile = useMediaQuery('(max-width: 768px)');
+    const isMobile = useMediaQuery('(max-width: 1024px)');
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 10);
@@ -94,8 +94,8 @@ export default function Header() {
                         <Image
                             src="/burger-icon.svg"
                             alt=""
-                            width={20}
-                            height={20}
+                            width={25}
+                            height={25}
                         />
                     </button>
                 )}
@@ -105,7 +105,7 @@ export default function Header() {
                     onClose={() => setIsMenuOpen(false)}
                 >
                     <span
-                        className={`${mitr.className} text-2xl font-semibold tracking-wide absolute top-5 left-11 text-gray-900 xl:text-[38px]`}
+                        className={`${mitr.className} absolute top-5 left-11 text-2xl font-semibold tracking-wide text-gray-900 xl:text-[38px]`}
                     >
                         <span className="text-[#d4af37]">Sti</span>Joy.com
                     </span>

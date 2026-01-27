@@ -2,7 +2,7 @@ import { persons } from '@/data/persons';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function OurTeaam() {
+export default function OurTeam() {
     return (
         <section className="relative flex flex-col items-center overflow-hidden rounded-3xl bg-linear-to-br from-[#05040d] via-[#0c0b1d] to-[#1a1638] px-12 py-28">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.15),transparent_60%)]" />

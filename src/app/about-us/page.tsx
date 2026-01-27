@@ -1,11 +1,19 @@
-import About from '@/sections/about/About';
-import OurTeaam from '@/sections/our-team/Ourteam';
+import { lazy, Suspense } from 'react';
+import Reveal from '@/components/reveal/Reveal';
+import Loader from '@/components/loader/Loader';
+
+const About = lazy(() => import('@/sections/about/About'));
+const OurTeam = lazy(() => import('@/sections/our-team/Ourteam'));
 
 export default function Page() {
     return (
-        <>
-            <About />
-            <OurTeaam />
-        </>
+        <Suspense fallback={<Loader />}>
+            <Reveal>
+                <About />
+            </Reveal>
+            <Reveal>
+                <OurTeam />
+            </Reveal>
+        </Suspense>
     );
 }
