@@ -90,7 +90,7 @@ export default function Features() {
                                 />
                             )}
                             <div
-                                className={`relative flex w-175 flex-col items-center gap-4 rounded-3xl border border-gray-200 p-9 shadow-2xl md:flex-row lg:gap-8 xl:gap-20 ${el.id % 2 === 1 ? 'ml-auto text-right md:flex-row-reverse' : ''} `}
+                                className={`relative flex md:w-175 flex-col items-center gap-4 rounded-3xl border border-gray-200 p-9 shadow-2xl md:flex-row lg:gap-8 xl:gap-20 ${el.id % 2 === 1 ? 'ml-auto text-right md:flex-row-reverse' : ''} `}
                             >
                                 <span
                                     className={`rounded-full bg-[#ffaa00] px-8 py-4 text-xl font-bold text-white shadow-[0_0_20px_rgba(0,0,0,0.6)] shadow-amber-400 sm:absolute sm:top-8 ${el.id % 2 === 1 ? 'right-auto left-4' : 'right-4'} `}
