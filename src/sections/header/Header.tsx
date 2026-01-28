@@ -112,7 +112,10 @@ export default function Header() {
                     <ul className="mt-[30%] flex flex-col items-center gap-6">
                         {menu.map((item) => (
                             <li key={item.title}>
-                                <Link href={item.link}>
+                                <Link
+                                    href={item.link}
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
                                     <span className="relative text-2xl font-medium tracking-wide text-gray-900">
                                         {item.title}
                                     </span>

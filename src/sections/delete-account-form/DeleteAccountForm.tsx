@@ -1,6 +1,6 @@
 export default function DeleteAccountForm() {
     return (
-        <section className="w-full rounded-2xl bg-[#f3f4f8] py-20">
+        <section className="w-full rounded-2xl bg-[#f3f4f8] py-5 lg:py-20">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="max-w-2xl">
                     <h4 className="mb-6 text-3xl font-bold text-[#c6a54a]">

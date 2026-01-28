@@ -1,6 +1,6 @@
 export default function PublicAgreement() {
     return (
-        <section className="w-full bg-[#f3f4f8] py-20">
+        <section className="w-full bg-[#f3f4f8] py-5 lg:py-20">
             <div className="mx-auto max-w-5xl px-6">
                 <div className="rounded-2xl bg-white p-8 md:p-12">
                     <h1 className="mb-4 text-3xl font-bold text-[#c6a54a]">

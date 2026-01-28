@@ -1,6 +1,6 @@
 export default function PrivacyPolicy() {
     return (
-        <section className="mx-auto max-w-4xl px-4 py-10">
+        <section className="mx-auto max-w-4xl px-4 py-4 lg:py-10">
             <div className="space-y-6 rounded-xl border border-gray-200 bg-white p-6 text-sm leading-relaxed text-gray-700">
                 <h1 className="text-xl font-semibold text-gray-900">
                     ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ

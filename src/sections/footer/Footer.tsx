@@ -127,7 +127,7 @@ export default function Footer() {
 
             <div className="my-10 h-px bg-white/10" />
 
-            <div className="flex flex-col items-center gap-2 text-xs text-gray-500">
+            <div className="flex text-center flex-col items-center gap-2 text-xs text-gray-500">
                 <p>© 2020–2026 StiJoy. Всі права захищені.</p>
 
                 <Link

@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <section className="flex justify-center px-4 py-20">
+        <section className="flex px-2 py-4 justify-center lg:px-4 lg:py-20">
             <div className="w-full max-w-4xl rounded-3xl border border-white/10 bg-white/5 p-10 text-center shadow-xl backdrop-blur-md md:p-14">
                 <h2 className="text-4xl font-semibold tracking-tight text-gray-800 md:text-5xl">
                     Про нас

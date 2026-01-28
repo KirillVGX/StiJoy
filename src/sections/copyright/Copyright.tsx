@@ -1,6 +1,6 @@
 export default function Copyright() {
     return (
-        <section className="w-full rounded-2xl bg-[#f3f4f8] py-20">
+        <section className="w-full rounded-2xl bg-[#f3f4f8] py-5 lg:py-20">
             <div className="mx-auto max-w-4xl px-6">
                 <h4 className="mb-6 text-3xl font-bold text-[#c6a54a]">
                     Авторський договір про передачу прав
@@ -13,11 +13,11 @@ export default function Copyright() {
                     </p>
 
                     <p>
-                        «___» __________ 2024 р.
+                        «___» ____ _____ 2024 р.
                         <br />
                         ФОП Строчик Євгеній Олександрович, надалі —{' '}
                         <strong>«Замовник»</strong>, та
-                        _______________________________________, надалі —{' '}
+                        ________ ____________ __________ ______, надалі —{' '}
                         <strong>«Автор»</strong>, уклали цей Договір про наступне:
                     </p>
 

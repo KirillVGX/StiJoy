@@ -24,3 +24,13 @@ main {
     width: 100%;
     max-width: 1536px;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding-inline: 10px;
+    }
+
+    main {
+        gap: 20px;
+    }
+}
