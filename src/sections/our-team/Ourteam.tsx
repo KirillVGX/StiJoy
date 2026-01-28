@@ -20,7 +20,7 @@ export default function OurTeam() {
                 {persons.map((person) => (
                     <div
                         key={person.id}
-                        className="group flex flex-col items-center rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all duration-500 hover:border-[#d4af37]/40"
+                        className="group flex flex-col items-center rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl transition-all duration-500 hover:border-[#d4af37]/40 md:p-8"
                     >
                         <div className="relative mb-6">
                             <Image
