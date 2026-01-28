@@ -1,5 +1,9 @@
 'use client';
 
+import { lazy, Suspense } from 'react';
+import Reveal from '@/components/reveal/Reveal';
+import Loader from '@/components/loader/Loader';
+
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import Image from 'next/image';
 
@@ -8,19 +12,19 @@ const features = [
         id: 1,
         title: 'У верхній частині екрану натисніть на пошук, щоб ввести назву бажаного стікерпака!',
         img: '/1.avif',
-        sticker: '/sticker1.jpg',
+        sticker: '/sticker1.png',
     },
     {
         id: 2,
         title: 'На початковому екрані ви бачите пошук за назвою та набір стікерпаків, відсортованих за популярністю та нові. Проведіть пальцем по екрану, щоб відобразилися категорії стікерів і пошук необхідних вам стікерпаків стане ще зручніше!',
         img: '/2.avif',
-        sticker: '/sticker2.jpg',
+        sticker: '/sticker2.png',
     },
     {
         id: 3,
         title: 'Оберіть категорію стікерпаків, яка вас цікавить, і вам буде показано список стікерпаків за обраною тематикою!',
         img: '/3.avif',
-        sticker: '/sticker3.jpg',
+        sticker: '/sticker3.jpeg',
     },
     {
         id: 4,
@@ -50,13 +54,13 @@ const features = [
         id: 8,
         title: 'У вікні з інформацією про стікерпак натисніть на значок трьох крапок у верхньому правому куті, щоб надіслати скаргу на стікерпак у разі виявлення порушень.',
         img: '/8.avif',
-        sticker: '/sticker8.jpg',
+        sticker: '/sticker8.png',
     },
     {
         id: 9,
         title: 'У формі для подання жалоби ви зможете вказати причину і детально описати суть порушення.',
         img: '/9.avif',
-        sticker: '/sticker9.jpg',
+        sticker: '/sticker9.png',
     },
 ];
 
@@ -71,40 +75,43 @@ export default function Features() {
                 додатком{' '}
                 <span className="font-semibold text-[#ffaa00]">StiJoy</span>
             </h2>
-            {features.map((el) => (
-                <div
-                    className={`flex gap-4 lg:gap-10 xl:gap-20 ${el.id % 2 === 1 ? 'flex-row-reverse' : ''}`}
-                    key={el.id}
-                >
-                    {!isMobile && (
-                        <Image
-                            src={el.sticker}
-                            alt="Sticker"
-                            width={400}
-                            height={200}
-                        />
-                    )}
-                    <div
-                        className={`relative flex w-175 flex-col items-center gap-4 rounded-3xl border border-gray-200 p-9 shadow-2xl md:flex-row lg:gap-8 xl:gap-20 ${el.id % 2 === 1 ? 'ml-auto text-right md:flex-row-reverse' : ''} `}
-                    >
-                        <span
-                            className={`rounded-full bg-[#ffaa00] px-8 py-4 text-xl font-bold text-white shadow-[0_0_20px_rgba(0,0,0,0.6)] shadow-amber-400 sm:absolute sm:top-8 ${el.id % 2 === 1 ? 'right-auto left-4' : 'right-4'} `}
+            <Suspense fallback={<Loader />}>
+                {features.map((el) => (
+                    <Reveal key={el.id}>
+                        <div
+                            className={`flex gap-4 lg:gap-10 xl:gap-20 ${el.id % 2 === 1 ? 'flex-row-reverse' : ''}`}
                         >
-                            Крок {el.id}
-                        </span>
-                        <Image
-                            src={el.img}
-                            alt="Instruction"
-                            width={300}
-                            height={500}
-                        />
+                            {!isMobile && (
+                                <Image
+                                    src={el.sticker}
+                                    alt="Sticker"
+                                    width={400}
+                                    height={200}
+                                />
+                            )}
+                            <div
+                                className={`relative flex w-175 flex-col items-center gap-4 rounded-3xl border border-gray-200 p-9 shadow-2xl md:flex-row lg:gap-8 xl:gap-20 ${el.id % 2 === 1 ? 'ml-auto text-right md:flex-row-reverse' : ''} `}
+                            >
+                                <span
+                                    className={`rounded-full bg-[#ffaa00] px-8 py-4 text-xl font-bold text-white shadow-[0_0_20px_rgba(0,0,0,0.6)] shadow-amber-400 sm:absolute sm:top-8 ${el.id % 2 === 1 ? 'right-auto left-4' : 'right-4'} `}
+                                >
+                                    Крок {el.id}
+                                </span>
+                                <Image
+                                    src={el.img}
+                                    alt="Instruction"
+                                    width={300}
+                                    height={500}
+                                />
 
-                        <p className="mt-auto mb-4 block text-center lg:text-sm xl:mb-16 xl:w-2xs xl:text-base">
-                            {el.title}
-                        </p>
-                    </div>
-                </div>
-            ))}
+                                <p className="mt-auto mb-4 block text-center lg:text-sm xl:mb-16 xl:w-2xs xl:text-base">
+                                    {el.title}
+                                </p>
+                            </div>
+                        </div>
+                    </Reveal>
+                ))}
+            </Suspense>
         </section>
     );
 }
