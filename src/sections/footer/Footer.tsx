@@ -45,7 +45,7 @@ export default function Footer() {
                 <span
                     className={`${mitr.className} text-3xl font-semibold tracking-wide text-white`}
                 >
-                    <span className="text-[#d4af37]">Sti</span>Joy.com
+                    <span className="text-[#d4af37]">Sti</span>Joy
                 </span>
 
                 <div className="flex flex-col sm:flex-row gap-4">

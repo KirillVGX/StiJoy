@@ -31,7 +31,7 @@ export default function Header() {
                 <span
                     className={`${mitr.className} text-2xl font-semibold tracking-wide text-gray-900 xl:text-[38px]`}
                 >
-                    <span className="text-[#d4af37]">Sti</span>Joy.com
+                    <span className="text-[#d4af37]">Sti</span>Joy
                 </span>
 
                 {!isMobile ? (
