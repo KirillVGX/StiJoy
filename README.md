@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Проєкт: Вебзастосунок (оновлений дизайн)
 
-## Getting Started
+## Контактні дані
+- **Telegram:** _@MrKirilI_
+- **Email:** _sklipiskirill@gmail.com_
 
-First, run the development server:
+---
 
-```bash
+## Використані технології та інструменти
+- **Next.js** — основний фреймворк для розробки
+- **TypeScript** — типізація та підвищення надійності коду
+- **Tailwind CSS** — стилізація інтерфейсу
+- **Git** — контроль версій
+- **npm** — керування залежностями
+
+---
+
+## Причини вибору дизайну, структури та функцій
+Дизайн проєкту створений на основі основного сайту платформи.  
+Я взяв існуючу ідею за основу та зробив її **оновленою, сучаснішою і візуально привабливішою**, відповідно до власного бачення.
+
+Структура застосунку побудована з акцентом на:
+- зручну навігацію
+- логічне розділення компонентів
+- можливість масштабування в майбутньому
+
+---
+
+## Функції проєкту
+
+### Реалізовані зараз
+- Анімації інтерфейсу
+- Новий розіграш (оновлена логіка / дизайн)
+
+### Плануються до реалізації пізніше
+- Аутентифікація користувачів
+
+### Не планується реалізовувати
+- (відсутні або не визначені на даний момент)
+
+---
+
+## Ідеї для наступних версій
+- Повноцінна система аутентифікації та ролей
+- Розширення функціоналу розіграшів
+- Оптимізація продуктивності
+- Додавання нових анімацій та інтерактивних елементів
+- Покращення адаптивності для різних пристроїв
+
+---
+
+## Використання штучного інтелекту
+Штучний інтелект використовувався для:
+- виявлення та виправлення помилок у коді
+- допомоги з підбором кольорів і їх поєднанням у дизайні
+- загальних рекомендацій щодо покращення UI/UX
+
+## Запуск проєкту
+Для запуску проєкту в режимі розробки використовується лише команда:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Усі ключові рішення, структура проєкту та фінальні правки були виконані вручну.
